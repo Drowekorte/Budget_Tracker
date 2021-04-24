@@ -7,7 +7,7 @@ const request = indexedDB.open('BudgetDB', budgetVersion || 21);
 request.onupgradeneeded = function (event) {
   console.log('Upgrade needed in IndexDB');
 
-  const { oldVersion } = e;
+  const { oldVersion } = event;
   const newVersion = event.newVersion || db.version;
 
   console.log(`DB Updated from version ${oldVersion} to ${newVersion}`);
