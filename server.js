@@ -20,8 +20,6 @@ app.use(require("./routes/api.js"));
 //   res.sendFile(__dirname + "/public/index.html")
 // })
 
-
-
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/budget", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
